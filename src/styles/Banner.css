@@ -8,10 +8,7 @@
 	flex-direction: row-reverse;
 	align-items: center;
     background-color: beige;
-    animation-name: bann;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+
 
 }
 .banner:hover{
@@ -19,6 +16,10 @@
 .logo{
     width: 90px;
     height: 70px;
+    animation-name: bann;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .title{
     color: rgb(45, 114, 45);
@@ -28,12 +29,10 @@
 }
 @keyframes bann {
     0%{
-        background-color: rgb(160, 245, 160);
-        transform: rotateX(0deg)
+        transform: rotateZ(0deg)
     }
     100%{
-        background-color: rgb(31, 252, 64);
-        transform: rotateX(180deg);
+        transform: rotateZ(180deg);
     }
 
 }

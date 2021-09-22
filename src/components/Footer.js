@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import '../styles/Footer.css'
 
-function Footer() {
+function Footer(props) {
 	const [inputValueMail, setInputValueMail] = useState('pat your email here ')
   const [inputValueName ,setInputValueName ]= useState('pat your name here ')
-
+  const confirmation=`votre demande est enregistrée sous l'identifiant :\nE-mail : ${inputValueMail} \nName: ${inputValueName}  \n `
 	return (
 		<footer className='lfooter' >
 			<div className='footer-elem'>
@@ -13,38 +13,47 @@ function Footer() {
 			<div className='footer-elem'>
                        
                         First name:
-                        <input
-                             onChange={handleInput}
+                        <input className="first-name"
+                             onChange={handleInputName}
                              value={inputValueName}
-                             onBlur={(e) => checkValueName(e.target.value)}
+                             
                         />
                       <br/>
                     Email:
-                        <input
-                        onChange={handleInput}
+                        <input className="email"
+                        onChange={handleInputmail}
                         value={inputValueMail}
-                        onBlur={(e) => checkValueMail(e.target.value)}
                         />
             </div>
+            <button className="send-inf" onClick={(e) => checkValueMail(e.target.value)}> Send </button>
+
 		</footer>
 	)
     function checkValueMail() {
-        if (!inputValueMail.includes('@')) {
-              alert("attention, il n'y a pas d'@, ceci n'est pas une adresse valide")
-        }else
-             { alert(`E-mail entrer est  : ${inputValueMail}`)
+
+       if (!inputValueMail.includes('@')) {
+              alert("attention, there is no @, this is not a valid address ")
+        }else if(window.confirm(confirmation)){
+          if (inputValueName!==" " && inputValueName!=="" ){
+             { alert(`Your order is Registered \n\nyou will pay in total : ${props.total} \n\n\nthank you for your trust`)
+        }
+       }else{
+              alert("You should entred your name !")
+       }
+      } else{
+          alert(" your request canceled ")
+        }
+        
     }
-    }
-    function handleInput(e) {
+    
+    function handleInputmail(e) {
             setInputValueMail(e.target.value)
         }
-        function checkValueName() {
-          if (!inputValueName.includes('@')) {
-                alert("attention, il n'y a pas d'@, ceci n'est pas une adresse valide")
-          }else
-               { alert(`E-mail entrer est  : ${inputValueName}`)
-      }
-      }
+        function handleInputName(e) {
+            setInputValueName(e.target.value)
+
+        }
+        
 }
 
 export default Footer
