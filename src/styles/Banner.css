@@ -1,0 +1,39 @@
+.banner{
+    color: black;
+    text-align: right;
+    padding: 10px;
+    border-bottom: solid 2px black;
+    display: flex;
+	justify-content: flex-end;
+	flex-direction: row-reverse;
+	align-items: center;
+    background-color: beige;
+    animation-name: bann;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+.banner:hover{
+         animation-play-state: paused;}
+.logo{
+    width: 90px;
+    height: 70px;
+}
+.title{
+    color: rgb(45, 114, 45);
+    padding-left: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+@keyframes bann {
+    0%{
+        background-color: rgb(160, 245, 160);
+        transform: rotateX(0deg)
+    }
+    100%{
+        background-color: rgb(31, 252, 64);
+        transform: rotateX(180deg);
+    }
+
+}

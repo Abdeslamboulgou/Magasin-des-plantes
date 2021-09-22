@@ -1,0 +1,42 @@
+.cart {
+	color: white;
+	background-color: #04da6f;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 200px;
+}
+
+.cart-add-button {
+	margin-left: 170px;
+	padding-bottom: 20px;
+	cursor: pointer;
+}
+
+.cart-toggle-button {
+	outline: none;
+	border: none;
+	font-weight: 600;
+	cursor: pointer;
+	align-self: self-start;
+	padding: 0;
+	color: rgb(255, 84, 5);
+}
+
+.cart-closed {
+	padding: 32px;
+	width: 200px;
+
+}
+.clear-button{
+    color: gainsboro;
+	background-color: rgb(255, 147, 6);
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.cart-closed > button {
+	color: black;
+
+}
