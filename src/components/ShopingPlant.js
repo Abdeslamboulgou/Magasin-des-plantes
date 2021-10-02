@@ -14,7 +14,7 @@ function ShopingPlant({cart,updateCart}){
     // La méthode concat() est utilisée afin de fusionner un ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.
      //  const categories = plantList.reduce((acc,plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),[])
      const categories = plantList.reduce((acc,plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),[])
-
+     
     function addToCart(name, price) {
         
         // on verifier si la plante est existe avec la methode find
@@ -33,7 +33,8 @@ function ShopingPlant({cart,updateCart}){
              } else {
                        updateCart([...cart, { name, price, amount: 1 }])
                     }
-    }                                    
+    }
+                                   
     return(
         // La méthode map() crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
         <div className='shopping-list'>
