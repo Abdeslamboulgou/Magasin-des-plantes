@@ -12,7 +12,6 @@ import thymCitron from '../assets/thymCitron.jpg'
 /*import graminee from '../assets/graminee.jpg'
 import lavande from '../assets/lavande.jpg'*/
 import strelitzia from '../assets/strelitzia.jpg'
-
 export const plantList = [
 	{
 		name: 'monstera',
@@ -31,7 +30,6 @@ export const plantList = [
 		light: '2',
 		cover: ficus,
 		price : 15
-
 
 	},
 	{
