@@ -1,16 +1,41 @@
 .shopping-list {
 	width: 100%;
 }
+select{
+	box-shadow: 2px 3px 4px rgb(22, 20, 20);
+	padding: 0.6em 1.1em 0.3em 2em;
+	color: rgb(66, 66, 85);
+	border: none;
+	outline: none;
+	
+}
+
 .plant-list {
 	list-style-type: none;
 	padding: 32px;
+	padding-top: 100px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	column-gap: 40px;
+	row-gap: 50px
+	
 }
+
 .add-button{
-       background-color: rgb(210, 245, 202);
-	   border-radius: 10px;
-       cursor: pointer;
-	   
+	
+	background-color: rgb(48, 131, 0);
+    padding: 3px;
+    width: 120px;
+    color: aliceblue;
+    border: 0.5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.add-button:hover{
+    background-color: rgb(184, 247, 113);
+    color: rgb(46, 46, 46);
+	font-weight: bolder;
+    margin-left: 2px;
 }

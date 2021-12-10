@@ -1,6 +1,6 @@
 .categories {
 	text-align: center;
-	padding-top: 5px;
+	padding-top: 10px;
     position: absolute;
     float: left;
     margin-left: 400px;
@@ -9,10 +9,23 @@
 
 .categories-select {
 	margin-right: 15px;
-    background-color: rgb(125, 250, 108);
+    background-color: rgb(216, 247, 181);
 
 }
+
 .Reset-button{
-    background-color: rgb(225, 248, 220);
+	
+	background-color: rgb(48, 131, 0);
+	padding: 0.6em 2em ;
+    color: aliceblue;
+    border: 0.5px;
+    border-radius: 5px;
+    outline: none;
     cursor: pointer;
+}
+.Reset-button:hover{
+    background-color: rgb(210, 247, 168);
+    color: rgb(46, 46, 46);
+	font-weight: bolder;
+    margin-left: 2px;
 }

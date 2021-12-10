@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import '../styles/Cart.css'
-import xbutton from '../assets/x-button.png'
 
 
 //je fais la destrecturation pour recuperer mes props en une ligne 
@@ -31,17 +30,16 @@ function Cart({ cart, updateCart, total, setTotal }) {
 
     return isOpen ? (<div className="cart">
         <div className="cart-add-button">
-            <button className='cart-toggle-button' onClick={() => setIsOpen(false)}><img className="butn" src={xbutton} alt='close basket' />
+            <button className='cart-toggle-button' onClick={() => setIsOpen(false)}><i style={{cursor:'pointer'}} className='fa fa-times-circle' ></i>
             </button>
         </div>
-        {cart.length > 0 ? (
+        {cart.length > 0 ? 
             <div>
                 <h1>Basket</h1>
-
                 {cart.map(({ name, price, amount }, index) => (
                     <div key={`${name}-${index}`}>
                         <table>
-                            <tr className='cart_list'>
+                            <tr >
                                <td> {name}</td>
                                <td>{price} * {amount} </td>
                                <td><button className="remove" onClick={() => RemovePlant(name)}>X</button></td>
@@ -50,17 +48,16 @@ function Cart({ cart, updateCart, total, setTotal }) {
                     </div>
 
                 ))}
-                <p>Total : {setTotal(total)}$</p>
+                <p>Total : {cart.reduce((amount,item) => item.price + amount,0)} $</p>
                 <button className="clear-button" onClick={() => updateCart([])}> Clear the basket  </button>
 
-            </div>) : (
-            <div> your basket is empty </div>
+            </div> : (
+            <div className='empty'> your basket is empty </div>
         )}
 
-    </div>) : <div>( <div className='cart-closed'>
+    </div>) : <div> <div className='cart-closed'>
         <button className='cart-toggle-button' onClick={() => setIsOpen(true)}> Open shopping cart  </button>
-    </div>
-        )
+    </div>     
     </div>
 
 }

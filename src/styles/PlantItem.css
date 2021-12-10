@@ -19,18 +19,31 @@
 .plant-item-price {
 	position: absolute;
 	border-radius: 30px 30px 30px 0;
-	background-color: #31b472;
+	background-color: #5ae09d;
 	color: white;
-	padding: 15px;
+	padding: 10px;
 	right: 0;
 	top: 0;
 	font-weight: 500;
 }
-.zoom img {
-	 transform: scale(0.6);
-	 transition: 0.3s ease-in-out;
-}
-.zoom img:hover{
-transform: scale(1);
 
+.zoom{
+    box-shadow: 4px 4px 4px gray;
+    box-sizing: border-box;
 }
+.zoom:hover{
+    animation: zoom 2s forwards;
+    opacity: 0.85;
+	background: linear-gradient(to bottom , rgb(255, 255, 255)60% , black);
+	color: blanchedalmond;
+}
+@keyframes zoom {
+    0%{
+         transform: scale(1);
+         box-shadow: 0 2px 5px  rgb(32, 31, 31);
+    }
+    100%{
+             transform: scale(1.02);
+    }
+}
+

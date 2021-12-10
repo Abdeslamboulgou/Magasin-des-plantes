@@ -15,7 +15,7 @@ function  QuestionForm() {
         </div>)
 
     //function  handleSubmit(e) {
-    // j'utilise l'evenement preventDefault pour que la page ne reffraiche pas lorsque la fonction alerte afficher le nome que je tape sur la bare texte
+    // j'utilise l'evenement preventDefault pour que la page ne reffraiche pas lorsque la fonction alerte afficher le nom que je tape sur la bare texte
     //e.preventDefault()
     //alert(e.target['my_input'].value)}
 

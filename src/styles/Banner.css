@@ -1,15 +1,58 @@
 .banner{
-    color: black;
     text-align: right;
     padding: 10px;
-    border-bottom: solid 2px black;
     display: flex;
 	justify-content: flex-end;
 	flex-direction: row-reverse;
 	align-items: center;
-    background-color: beige;
+    background: linear-gradient(to right bottom, rgb(65, 64, 64) , rgb(34, 34, 34));
+    box-shadow: 1px 2px 6px rgb(97, 96, 96);
 
 
+}
+.nav_bar{
+    margin-left: 56%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    column-gap: 40px;
+    font-weight: bolder;
+    
+}
+
+.about{
+    cursor: pointer;
+    
+}
+.about:hover{
+    border-bottom: 3px solid rgb(43, 170, 43);
+    
+}
+.products{
+    cursor: pointer;
+    
+
+}
+.products:hover{
+    border-bottom: 3px solid rgb(43, 170, 43);
+    
+
+}
+.contact{
+    cursor: pointer;
+   
+
+}
+.contact:hover{
+    border-bottom: 3px solid rgb(43, 170, 43);
+    
+
+}
+.active-nav{
+    text-decoration: none;
+    color: rgb(255, 203, 107);
+}
+.nav_bar  Link{
+    text-decoration: none;
 }
 .banner:hover{
          animation-play-state: paused;}
@@ -22,7 +65,7 @@
     animation-direction: alternate;
 }
 .title{
-    color: rgb(45, 114, 45);
+    color: rgb(190, 248, 190);
     padding-left: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     

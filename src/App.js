@@ -5,33 +5,31 @@ import Cart from './components/Cart';
 import Footer from './components/Footer';
 import '../src/styles/layout.css'
 import ShopingPlant from './components/ShopingPlant';
+import { BrowserRouter as Router , Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Contact from './pages/Contact';
 function App() {
-     const [isFooterShown , updateFooter]=useState(true)
-     const savedCart = localStorage.getItem('cart')
-     const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
-     const [total , setTotal] =useState(cart.reduce((acc, plantType) => acc + plantType.amount * plantType.price , 0 ))
-     //pour la lecture de l'article localStorage (  localStorage.getItem()  )
-     useEffect(() => {
-       // sauvegarder le panier à chaque modification 
-       localStorage.setItem('cart', JSON.stringify(cart))
-     }, [cart])
+  const savedCart = localStorage.getItem('cart')
+  const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
+  //pour la lecture de l'article localStorage (  localStorage.getItem()  )
+  useEffect(() => {
+    // sauvegarder le panier à chaque modification 
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
      return (
        // pour ajouter un lien entre les components Cart et ShopingList
               // je passe cart et updateCart en props
          <div>
-              <Banner/> 
 
-
-            <div   className='lmj-layout-inner'>
-              <Cart cart={cart} updateCart={updateCart} total={total} setTotal={setTotal} />
-              <ShopingPlant cart={cart} updateCart={updateCart}/>
-              </div>
-            <div>
-                <button className="hide-button" onClick={() => updateFooter(!isFooterShown)}>
-                        To hide
-                </button>
-                {isFooterShown && <Footer total={total} setTotal={setTotal}/>}
-            </div>
+           <Router>
+             <Switch>
+                  <Route path="/" exact component={Home}  />
+                  <Route path="/products" exact component={Products} />
+             </Switch>
+            <Route path="/contact" exact component={Contact} /> 
+            
+            </Router>
 
           </div>
     
