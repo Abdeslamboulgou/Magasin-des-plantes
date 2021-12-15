@@ -1,11 +1,7 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Banner  from './components/Banner';
-import Cart from './components/Cart';
-import Footer from './components/Footer';
 import '../src/styles/layout.css'
-import ShopingPlant from './components/ShopingPlant';
-import { BrowserRouter as Router , Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
@@ -17,22 +13,22 @@ function App() {
     // sauvegarder le panier à chaque modification 
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
-     return (
-       // pour ajouter un lien entre les components Cart et ShopingList
-              // je passe cart et updateCart en props
-         <div>
+  return (
+    // pour ajouter un lien entre les components Cart et ShopingList
+    // je passe cart et updateCart en props
+    <div>
 
-           <Router>
-             <Switch>
-                  <Route path="/" exact component={Home}  />
-                  <Route path="/products" exact component={Products} />
-             </Switch>
-            <Route path="/contact" exact component={Contact} /> 
-            
-            </Router>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/products" exact component={Products} />
+        </Switch>
+        <Route path="/contact" exact component={Contact} />
 
-          </div>
-    
+      </Router>
+
+    </div>
+
   );
 }
 

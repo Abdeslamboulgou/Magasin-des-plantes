@@ -1,6 +1,8 @@
 import React from "react";
 import '../styles/PlantItem.css'
 import CareEchel from "./CareEchel";
+
+
 function PlantItem({ id, cover, name, water, light, price }){
   function handleClic(plantName) {
     

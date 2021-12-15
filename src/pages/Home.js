@@ -6,10 +6,10 @@ import Footer from '../components/Footer';
 function Home() {
     return (
         <div className='home'>
-            <Banner/>
-            <Acceuil/>
- <br/>
- <Footer/>
+            <Banner />
+            <Acceuil />
+            <br />
+            <Footer />
         </div>
     );
 }

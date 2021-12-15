@@ -16,7 +16,7 @@ export const plantList = [
 	{
 		name: 'monstera',
 		category: 'classic',
-		id: '12a',
+		id: 1,
 		water :'2',
 		light: '3',
 		cover: monstrera,
@@ -25,7 +25,7 @@ export const plantList = [
 	{
 		name: 'ficus lyrata',
 		category: 'classic',
-		id: '2b',
+		id: 2,
 		water :'1',
 		light: '2',
 		cover: ficus,
@@ -35,7 +35,7 @@ export const plantList = [
 	{
 		name: 'silver pothos ',
 		category: 'classic',
-		id: '3d',
+		id: 3,
 		water :'3',
 		light: '2',
 		cover: pothos,
@@ -46,7 +46,7 @@ export const plantList = [
 	{
 		name: 'yucca',
 		category: 'greasy plant ',
-		id: '4c',
+		id: 4,
 		water :'3',
 		light: '3',
         cover : yucca,
@@ -56,7 +56,7 @@ export const plantList = [
 	{
 		name: 'flowers ',
 		category: 'greasy plant ',
-		id: '4d',
+		id: 5,
 		water :'2',
 		light: '1',
         cover : fleurs,
@@ -84,7 +84,7 @@ export const plantList = [
 	{
 		name: 'ivy',
 		category: 'outside ',
-		id: '5d',
+		id: 6,
 		water :'2',
 		light: '3',
 		cover :lierre,
@@ -104,7 +104,7 @@ export const plantList = [
 	{
 		name: 'basilic',
 		category: 'outside ',
-		id: '5g',
+		id: 7,
 		water :'2',
 		light: '3',
         cover : basilique,
@@ -134,7 +134,7 @@ export const plantList = [
 	{
 		name: 'thym-Citron',
 		category: 'inside',
-		id: '6k',
+		id: 8,
 		water :'3',
 		light: '2',
 		cover : thymCitron,
@@ -145,7 +145,7 @@ export const plantList = [
 	{
 		name: 'strelitzia',
 		category: 'inside',
-		id: '6l',
+		id: 9,
 		water :'2',
 		light: '2',
 		cover : strelitzia,

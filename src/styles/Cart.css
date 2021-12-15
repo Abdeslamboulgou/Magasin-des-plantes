@@ -57,17 +57,41 @@ font-weight: bolder;
 .clear-button{
 	background-color: rgb(255, 147, 6);
     padding: 3px;
-    width: 120px;
+    width: 90px;
     color: aliceblue;
     border: 0.5px;
+	position: relative;
+	left: 125px;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
 }
 .clear-button:hover{
-    background-color: rgb(248, 152, 135);
+    background-color: rgb(247, 216, 158);
     color: rgb(218, 69, 0);
     margin-left: 2px;
+}
+.buy-button{
+    background-color: rgb(59, 45, 248);
+	padding: 3px;
+    width: 90px;
+    color: aliceblue;
+    border: 0.5px;
+	position: relative;
+	right: 85px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.buy-button:hover{
+    background-color: rgb(138, 100, 241);
+    color: rgb(0, 2, 121);
+    margin-left: 2px;
+}
+.total{
+	color: rgb(2, 95, 2);
+	font-weight: bolder;
+	font-size: 16px;
 }
 .cart-closed > button {
 	color: black; 
