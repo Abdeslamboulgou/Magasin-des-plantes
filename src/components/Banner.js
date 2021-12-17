@@ -19,7 +19,7 @@ const Banner = () => {
             </NavLink></div>
         </div>
         <img src={logo} alt='La maison jungle' className='logo' />
-        <h1 className="title">{titre}</h1>
+        <h1 className="title">{titre.toUpperCase()}</h1>
     </div>)
 
 }
