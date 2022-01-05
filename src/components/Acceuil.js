@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/acceuil.css'
 
+// le composant Acceuil présente la page d'acceuil
 function Acceuil() {
     return (
         <div className='acceuil'>

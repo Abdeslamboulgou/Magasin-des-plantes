@@ -1,6 +1,6 @@
 .cart {
 	color: rgb(87, 70, 70);
-	background: linear-gradient(to bottom, rgb(255, 255, 255) , rgb(179, 179, 171));
+	background-color: white;
 	padding: 20px;
 	display: flex;
 	width: 300px;
@@ -14,7 +14,7 @@
 }
 .empty{
 	margin-top: 5px;
-	color: rgb(240, 64, 64);
+	color: rgb(12, 12, 12);
 	font-weight: bolder;
 }
 .cart-add-button {
@@ -42,8 +42,8 @@ font-weight: bolder;
     color:rgb(255, 0, 0);
     transition: transform 0.3s linear;
 	position: relative;
-    bottom: 10px;
-	left: 20px;
+    top: -20px;
+	left: 70px;
 }
 .fa-times-circle:hover{
       transform: rotate(180deg);
@@ -135,4 +135,8 @@ table {
 	  color: black;
 	  font-weight: bolder;
 	  size: 12px;
+  }
+  .panier img{
+	  width: 240px;
+	  height: 170px;
   }

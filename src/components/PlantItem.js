@@ -9,10 +9,18 @@ function PlantItem({ id, cover, name, water, light, price }){
     alert(`You want to buy a ${plantName} ? very good choice ,  click on Add Up 🌱✨`)
   }
           return ( <div className="zoom">
-            <li key={id} className='plant-item' onClick={() => handleClic(name)}>
+            <li key={id} className='plant-item'>
                <span className='plant-item-price'> {price} €</span>
-			         <img className='plant-item-cover' src={cover} alt={`${name} cover`} />
-			          {name}
+             <div className="plant-item-icon">
+               {/* on peut utiliser le variable cover dans un élément img pour afficher l'image quel contient */}
+			         <img className='plant-item-cover' src={cover} alt={`${name} cover`}  onClick={() => handleClic(name)}/>
+               <div class="overlay">
+                        <i class="fas fa-shopping-bag"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                {name}
+                </div>
                        <div>
                   	    <CareEchel  careType='water' echelValue={water} />
 			                  <CareEchel  careType='light' echelValue={light} />

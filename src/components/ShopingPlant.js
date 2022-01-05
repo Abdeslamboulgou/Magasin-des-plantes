@@ -45,7 +45,9 @@ function ShopingPlant({ cart, updateCart }) {
             />
             <ul className='plant-list'>
                 {plantList.map(({ id, cover, name, water, light, price, category }) => !activeCategory || activeCategory === category ? (
-                    <div key={id}>
+                 
+                 // La prop  key   est indispensable dans les listes de composants.
+                  <div key={id}>
                         <PlantItem
                             id={id}
                             cover={cover}

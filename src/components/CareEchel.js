@@ -7,12 +7,16 @@ const QuantitePlante = {
     3: 'a lot'
 }
 
+// le composant CareEchel comporte les props echelValue et careType comme arguments
+
 function CareEchel({ echelValue, careType }) {
     const range = [1, 2, 3]
 
+    // ici j'utilise un ternaire pour afficher un emoji
     const echelType = careType === 'light' ? '☀️' : '💧'
 
     return (
+
         // chaque élément à l’intérieur d’un appel à map() a besoin d’une clé.
 
         <div
@@ -20,6 +24,9 @@ function CareEchel({ echelValue, careType }) {
             }>
 
             {range.map((rangeElement) =>
+
+                 //toString() Une chaîne de caractères représentant l'objet.
+                 // retourner null dans la condition où je ne veux rien afficher
                 echelValue >= rangeElement ? <span key={rangeElement.toString()}>{echelType}</span> : null
             )
 

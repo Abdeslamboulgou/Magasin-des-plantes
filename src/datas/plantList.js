@@ -1,3 +1,5 @@
+//on déclare en fait une variable (fleurs , lierre , ... ) à laquelle on assigne le contenu de notre image.
+
 import fleurs from '../assets/fleurs.jpg'
 import lierre from '../assets/lierre.jpg'
 import monstrera from '../assets/monstera.jpg'

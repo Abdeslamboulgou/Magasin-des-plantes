@@ -20,8 +20,6 @@ function Products() {
         <Cart cart={cart} updateCart={updateCart} total={total} setTotal={setTotal} />
         <ShopingPlant cart={cart} updateCart={updateCart} />
       </div>
-      <br />
-      <hr />
       <Footer />
     </div>
   );

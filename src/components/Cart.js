@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import '../styles/Cart.css'
+import panierVide from '../assets/panier-vide.PNG'
 
 
 //je fais la destrecturation pour recuperer mes props en une ligne 
@@ -37,8 +38,8 @@ function Cart({ cart, updateCart, total, setTotal }) {
 
     return isOpen ? (<div className="cart">
         <div className="cart-add-button">
-            <button className='cart-toggle-button' onClick={() => setIsOpen(false)}><i style={{ cursor: 'pointer' }} className='fa fa-times-circle' ></i>
-            </button>
+           <i style={{ cursor: 'pointer' }} className='fa fa-times-circle'  onClick={() => setIsOpen(false)} ></i>
+           
         </div>
         {cart.length > 0 ?
             <div>
@@ -64,7 +65,10 @@ function Cart({ cart, updateCart, total, setTotal }) {
                 </span>
 
             </div> : (
-                <div className='empty'> your basket is empty </div>
+                <div className='panier'> 
+                    <img src={panierVide} alt="panier vide"/>
+                    <div className='empty'> your basket is empty </div>
+                </div>
             )}
 
     </div>) : <div> <div className='cart-closed'>
